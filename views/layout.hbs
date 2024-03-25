@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title>{{title}}</title>
+    {{!-- bootstrap icons  --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    {{! bootstrap css  }}
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    {{! custom css  }}
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+
+    {{! bootstrap js  }}
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    {{! custom js  }}
+    <script src="/javascripts/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/"><h2 class="mainLogo"> MeWe </h2></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navLinks"
+            aria-controls="navLinks"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navLinks">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="/"><i class="bi bi-house-door"></i> Home</a>
+              <a class="nav-link" href="/chat"><i class="bi bi-chat-dots"></i> Chat</a>
+                  <a class="nav-link" href="/posts"><i class="bi bi-stickies"></i> Posts</a>
+              <a class="nav-link" href="/about"><i class="bi bi-info-circle"></i> About</a>
+              <a class="nav-link" href="/contact"/><i class="bi bi-file-person"></i> Contact</a>   
+            </div>
+            {{#if user}}
+             <div class="navbar-nav d-flex m-auto">
+                <a class="nav-link" href="#">{{user.username}}</a>
+                <a class="nav-link" href="/auth/signout">SignOut</a>
+              </div>
+              {{else}}
+              <div class="navbar-nav d-flex m-auto">
+              <a class="nav-link" href="/auth/register">Register</a>
+              <a class="nav-link" href="/auth/login">SignIn</a>
+              </div>
+              {{/if}}
+          </div>
+        </div>
+      </nav>
+    </header>
+    {{{body}}}
+    <footer class="border-top footer text-muted">
+      <div class="container">
+          <div class="firstText">
+              <p>&copy; 2024 - MeWe - <a href="/" asp-action="Privacy">Privacy</a></p>
+              <a href="https://github.com/AryanB01" target="_blank">GitHub</a>
+          </div>
+          <div class="secondText">
+              <ul>
+                  <li>Aryan Bhattarai</li>
+                  <li><a href="#" target="_parent">200499425</a></li>
+                  <li><a href="#" target="_parent">Assignment_2:MEAN</li>
+              </ul>
+          </div>
+      </div>
+   </footer>
+  </body>
+</html>

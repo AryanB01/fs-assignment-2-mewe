@@ -1,0 +1,36 @@
+<h1>Posts</h1>
+{{#if user}}
+<a href="/posts/create" class="btn btn-secondary mb-4">
+  <i class="bi bi-plus-circle"></i>
+    New Post
+</a>
+{{else}}
+<h5><i>You are not signed in. Please sign in to access more features.</i></h5>
+{{/if}}
+<ul class="list-group">
+  {{#each posts}}
+    <li class="list-group-item">
+      <img
+        class="placeholderforUser mb-4"
+        src="https://placehold.co/50x50?text=@item.User.Username"
+        alt="placeholder for photo"
+      />
+      <div class="userInfo">
+        <span class="userName">{{this.username}}</span>
+        <span class="postTime">{{this.date}}</span>
+      </div>
+
+      <div class="contentforPost">
+        <h5><i class="headerPost"></i> {{this.title}}</h5>
+        <p class="post">{{this.body}}</p>
+        <a
+          href="/posts/detail/{{this._id}}"
+          class="btn btn-secondary float-end"
+        >
+          <i class="bi bi-book"></i>
+          More...
+        </a>
+      </div>
+    </li>
+  {{/each}}
+</ul>

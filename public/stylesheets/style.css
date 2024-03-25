@@ -1,0 +1,166 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+#navLinks > .navbar-nav > a > img{
+  padding: 5px;
+  margin: 5px;
+
+
+}
+/* styling for the above code using CSS*/
+
+.post {
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #f6f6f6;
+}
+
+.headerPost {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.placeholderforUser {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.userName {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.postTime {
+  color: grey;
+  cursor: pointer;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/*for content of the post*/
+
+.contentforPost {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+
+/*Style for homepage */
+.mainText {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 90vh;
+  flex-wrap: wrap;
+}
+
+.mainTitle {
+  background: linear-gradient(45deg, red, orange, black);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: sans-serif;
+  font-style: bold;
+  font-size: 75px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.paraMain {
+  padding: 10px;
+}
+
+/*Logo design*/
+
+.mainLogo {
+  background: linear-gradient(45deg, red, orange, black);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: sans-serif;
+  font-style: bold;
+  font-size: 30px;
+  cursor: pointer;
+  background-position: initial;
+}
+
+/*footer styling*/
+.footer {
+  padding: 10px 0;
+  border-top: 1px solid #e1e1e1;
+  color: #6c757d;
+  text-align: center;
+  line-height: 20px !important;
+  position: static !important;
+  border-bottom: 1px solid #e1e1e1;
+}
+/* for forms  */
+label{
+  margin: 5px
+  
+}
+input{
+  padding: 10px;
+}
+
+.footer a {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #007bff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.firstText {
+  margin-bottom: 15px;
+}
+
+.secondText {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.secondText ul {
+  list-style: none;
+  padding: 0;
+}
+
+.secondText ul li {
+  margin-right: 20px;
+  list-style: none;
+  display: inline;
+}

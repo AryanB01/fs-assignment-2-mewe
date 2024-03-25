@@ -1,0 +1,19 @@
+<h1 class="userInfo">{{post.title}}</h1>
+<p class="post">{{post.body}}</p>
+<div class="userInfo">
+    <h5>Posted By:</h5>
+        <span class="userName">{{post.username}}</span>
+        <span class="postTime">{{post.date}}</span>
+      </div>
+<a href="/posts" class="btn btn-secondary">
+    <i class="bi bi-skip-backward-fill"></i> Back to Blog
+</a>
+{{#if user}}
+    <a href="/posts/edit/{{post._id}}" class="btn btn-secondary">
+        <i class="bi bi-pencil-square"></i> Edit
+    </a>
+    <a href="/posts/delete/{{post._id}}" class="btn btn-danger"
+        onclick="return confirm('For sure?');">
+        <i class="bi bi-x-circle"></i> Delete
+    </a>
+{{/if}}

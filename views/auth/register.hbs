@@ -1,0 +1,48 @@
+<h1>Register</h1>
+<p><i>"Please regitser below to share your experience."</i></p>
+<form method="post">
+  <div class="mb-3">
+    <label for="username" class="form-label">Username:</label>
+    <input
+      class="form-control"
+      name="username"
+      id="username"
+      placeholder="Joe Satriani"
+      required
+    />
+  </div>
+  <label for="password" class="form-label">Password:</label>
+  <input
+    type="password"
+    id="password"
+    name="password"
+    class="form-control"
+    aria-describedby="passwordHelp"
+     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+     required
+  />
+  <img src="/images/show.png" alt="Show/Hide" id="imgShowHide" onclick="showHide();" />   
+  <div id="passwordHelp" class="form-text mb-2">
+    Your password must be 8-20 characters long, contain letters and numbers, and
+    must not contain spaces, special characters, or emoji.
+  </div>
+    <label for="confirmpassword" class="form-label">Confirm Password:</label>
+  <input
+    type="password"
+    id="confirmpassword"
+    class="form-control"
+    aria-describedby="passwordHelp"
+     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+     onkeyup="return checkPassword();"
+     required
+  />
+  <img src="/images/show.png" alt="Show/Hide" id="imgShowHide2" onclick="showHideConfirm();" />  
+  <span id="pwMsg"></span>
+  <div id="passwordHelp" class="form-text mb-2">
+    Your password must be 8-20 characters long, contain letters and numbers, and
+    must not contain spaces, special characters, or emoji.
+  </div>
+   <button class="btn btn-secondary mt-3 offset-4" onclick="return checkPassword();">
+        <i class="bi bi-person-fill-check"></i> Register
+    </button>
+</form>
